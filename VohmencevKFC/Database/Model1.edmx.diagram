@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af8c14734a6743e09db10417a183b602" Name="Diagram1">
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.Dishes" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.DishType" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.Ingridients" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.OrderContent" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.Orders" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.Recipe" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.Status" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Vohmencev_KFCModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="Vohmencev_KFCModel.FK__Dishes__DishType__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="Vohmencev_KFCModel.FK__OrderConte__Dish__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="Vohmencev_KFCModel.FK__Recipe__Dish__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="Vohmencev_KFCModel.FK__Recipe__Ingridie__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="Vohmencev_KFCModel.FK__OrderCont__DishS__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="Vohmencev_KFCModel.FK__OrderCont__Paych__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="Vohmencev_KFCModel.FK__Orders__OrderSta__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
