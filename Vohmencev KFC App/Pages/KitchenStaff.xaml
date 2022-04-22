@@ -1,0 +1,30 @@
+﻿<Page x:Class="Vohmencev_KFC_App.Pages.KitchenStaff"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Vohmencev_KFC_App.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="KitchenStaff">
+
+    <Grid ShowGridLines="False">
+        <Border Grid.Row="0" Background="Red" Grid.ColumnSpan="2"/>
+        <Label x:Name="OrdersLabel" Grid.Row="0" Grid.Column="0" Content="Очередь заказов" FontFamily="Segoe UI Black" FontSize="20" HorizontalAlignment="Left" Margin="25,5,0,0" VerticalAlignment="Top" Width="200"/>
+        <ListBox x:Name="OrdersList" Grid.Row="1" Grid.Column="0" FontFamily="Segoe UI Black" FontSize="24" HorizontalAlignment="Left" Height="288" Margin="25,25,0,0" VerticalAlignment="Top" Width="345"/>
+        <Button x:Name="OrdersStartButton" Grid.Row="1" Grid.Column="0" Content="Выбрать" Background="White" HorizontalAlignment="Left" Margin="125,335,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="OrdersStartButton_Click"/>
+        <Label x:Name="RecipeLabel" Grid.Row="0" Grid.Column="1" Content="Сейчас готовится:" FontFamily="Segoe UI Black" FontSize="20" HorizontalAlignment="Left" Margin="25,5,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="DishNameLabel" Grid.Row="1" Grid.Column="1" Content="" FontFamily="Segoe UI Black" FontSize="20" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="345"/>
+        <ListBox x:Name="RecipeList" Grid.Row="1" Grid.Column="1" FontFamily="Segoe UI Black" FontSize="20" HorizontalAlignment="Left" Height="253" Margin="25,60,0,0" VerticalAlignment="Top" Width="345"/>
+        <Button x:Name="RemoveButton" Grid.Row="1" Grid.Column="1" Content="Отмена" Background="Red"  HorizontalAlignment="Left" Margin="25,335,0,0" VerticalAlignment="Top" Width="159" Height="50" FontSize="20" Click="RemoveButton_Click"/>
+        <Button x:Name="ReadyButton" Grid.Row="1" Grid.Column="1" Content="Готово" Background="GreenYellow" HorizontalAlignment="Left" Margin="222,335,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="20" Click="ReadyButton_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="50"/>
+            <RowDefinition MinHeight="350"/>
+        </Grid.RowDefinitions>
+    </Grid>
+</Page>

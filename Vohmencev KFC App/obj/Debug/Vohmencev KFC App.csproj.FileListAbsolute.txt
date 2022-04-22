@@ -1,0 +1,26 @@
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\Vohmencev KFC App.exe.config
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\Vohmencev KFC App.exe
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\Vohmencev KFC App.pdb
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\MainWindow.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\Client.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\KitchenStaff.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\App.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App_Content.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App_MarkupCompile.cache
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App_MarkupCompile.lref
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\MainWindow.baml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\Client.baml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\KitchenStaff.baml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.g.resources
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev_KFC_App.Properties.Resources.resources
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.csproj.CopyComplete
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.exe
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.pdb
