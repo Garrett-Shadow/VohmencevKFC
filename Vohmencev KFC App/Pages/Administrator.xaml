@@ -1,0 +1,110 @@
+﻿<Page x:Class="Vohmencev_KFC_App.Pages.Administrator"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Vohmencev_KFC_App.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="Administrator">
+
+    <Grid Background="Red">
+        <TabControl TabStripPlacement="Top">
+            <TabItem Background="WhiteSmoke" Header="Сотрудники" FontFamily="Segoe UI Black" Height="40" Width="100">
+                <Grid Background="WhiteSmoke">
+                    <ListBox Name="StaffList" ItemsSource="{Binding Employees}" SelectionChanged="StaffListSelectionChanged" HorizontalAlignment="Left" Height="325" Margin="25,25,0,0" VerticalAlignment="Top" Width="350">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding FullName}"></Run>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label x:Name="StaffNameLabel" Content="Имя сотрудника" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,25,25,0" VerticalAlignment="Top" Width="345"/>
+                    <TextBox x:Name="StaffNameText" Text="{Binding SelectedEmployee.FullName}" FontSize="15" HorizontalAlignment="Right" Margin="0,60,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" FontFamily="Segoe UI"/>
+                    <Label x:Name="Login" Content="Логин (номер телефона)" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,90,25,0" VerticalAlignment="Top" Width="345"/>
+                    <TextBox x:Name="StaffLogin" Text="{Binding SelectedEmployee.StaffLogin}" FontSize="15" HorizontalAlignment="Right" Margin="0,125,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" FontFamily="Segoe UI"/>
+                    <Label x:Name="Password" Content="Пароль" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,155,25,0" VerticalAlignment="Top" Width="345"/>
+                    <TextBox x:Name="StaffPassword" Text="{Binding SelectedEmployee.StaffPassword}" FontSize="15" HorizontalAlignment="Right" Margin="0,190,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" FontFamily="Segoe UI"/>
+                    <Label x:Name="StaffRole" Content="Должность" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,220,25,0" VerticalAlignment="Top" Width="345"/>
+                    <ComboBox Name="RoleCombo" ItemsSource="{Binding Roles}" SelectedItem="{Binding SelectedEmployee.Position}" FontSize="15" HorizontalAlignment="Right" Margin="0,255,25,0" VerticalAlignment="Top" Width="345">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding PositionName}"/>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Button x:Name="StaffAddButton" Content="Добавить" Background="White" HorizontalAlignment="Left" Margin="25,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="StaffAddButton_Click"/>
+                    <Button x:Name="StaffRefreshButton" Content="Обновить" Background="White" HorizontalAlignment="Left" Margin="224,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="StaffRefreshButton_Click"/>
+                    <Button x:Name="StaffDropButton" Content="Сбросить" Background="White" HorizontalAlignment="Left" Margin="424,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="StaffDropButton_Click"/>
+
+                </Grid>
+            </TabItem>
+            
+            <TabItem Background="WhiteSmoke" Header="Новые блюда" FontFamily="Segoe UI Black" Height="40" Width="100">
+                <Grid Background="WhiteSmoke">
+                    <ListBox Name="DishesIngridientsList" ItemsSource="{Binding AllIngridients}" SelectionChanged="DishesIngridientsListSelectionChanged" HorizontalAlignment="Left" Height="325" Margin="25,25,0,0" VerticalAlignment="Top" Width="350">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding IngridientName}"></Run>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label x:Name="DishNameLabel" Content="Название блюда" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,25,25,0" VerticalAlignment="Top" Width="345"/>
+                    <TextBox x:Name="DishNameText" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Right" Margin="0,60,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345"/>
+                    <Label x:Name="DishTypeLabel" Content="Тип блюда" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,90,25,0" VerticalAlignment="Top" Width="345"/>
+                    <ComboBox Name="DishTypeCombo" ItemsSource="{Binding DishType}" SelectedItem="{Binding SelectedDish.DishType1}" HorizontalAlignment="Right" Margin="0,125,25,0" VerticalAlignment="Top" Width="345">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding TypeName}"/>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Label x:Name="DishPriceLabel" Content="Цена блюда" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,155,25,0" VerticalAlignment="Top" Width="345"/>
+                    <TextBox x:Name="DishPriceText" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Right" Margin="0,190,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345"/>
+                    <Label x:Name="DishRecipeLabel" Content="Состав блюда" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,220,25,0" VerticalAlignment="Top" Width="345"/>
+                    <ListBox x:Name="DishRecipeList" ItemsSource="{Binding DishRecipe}" SelectionChanged="DishRecipeListSelectionChanged"  HorizontalAlignment="Right" Height="170" Margin="0,255,25,0" VerticalAlignment="Top" Width="345">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding IngridientName}"></Run>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Button x:Name="DishSaveButton" Content="Сохранить" Background="White" HorizontalAlignment="Left" Margin="25,375,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="DishSaveButton_Click"/>
+                    <Button x:Name="DishDropButton" Content="Сбросить" Background="White" HorizontalAlignment="Left" Margin="224,375,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="DishDropButton_Click"/>
+
+                </Grid>
+            </TabItem>
+            
+            <TabItem Background="WhiteSmoke" Header="Ингридиенты" FontFamily="Segoe UI Black" Height="40" Width="100">
+                <Grid Background="WhiteSmoke">
+                    <ListBox Name="IngridientList" ItemsSource="{Binding Ingridients}" SelectionChanged="IngridientListSelectionChanged" HorizontalAlignment="Left" Height="325" Margin="25,25,0,0" VerticalAlignment="Top" Width="350">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding IngridientName}"></Run>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label x:Name="IngridientNameLabel" Content="Название ингридиента" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,25,25,0" VerticalAlignment="Top" Width="345"/>
+                    <TextBox x:Name="IngridientNameText" Text="{Binding SelectedIngridient.IngridientName}" FontSize="15" HorizontalAlignment="Right" Margin="0,60,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" FontFamily="Segoe UI"/>
+                    <Button x:Name="IngridientAddButton" Content="Добавить" Background="White" HorizontalAlignment="Left" Margin="25,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientAddButton_Click"/>
+                    <Button x:Name="IngridientRefreshButton" Content="Обновить" Background="White" HorizontalAlignment="Left" Margin="224,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientRefreshButton_Click"/>
+                    <Button x:Name="IngridientDropButton" Content="Сбросить" Background="White" HorizontalAlignment="Left" Margin="424,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientDropButton_Click"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Page>

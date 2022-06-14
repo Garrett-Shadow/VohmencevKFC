@@ -87,11 +87,19 @@ namespace Vohmencev_KFC_App.Pages
                 NewOrder.OrderDate = DateTime.Today;
                 NewOrder.OrderStatus = NewStatus;
                 Connection.Orders.Add(NewOrder);
-                Database.OrderContent NewOrdersContent = new Database.OrderContent();
-                NewOrdersContent.Paycheck = NewPaycheck;
-                NewOrdersContent.Dish = ShoppingCartList.Items.ToString();
-                NewOrdersContent.DishStatus = NewStatus;
-                Connection.OrderContent.Add(NewOrdersContent);
+                foreach (var Dish in ShoppingCartList.Items)
+                {
+                    Database.OrderContent NewOrdersContent = new Database.OrderContent();
+                    var DishName = Dish as Database.Dishes;
+                    if (DishName != null)
+                    {
+                        NewOrdersContent.Paycheck = NewPaycheck;
+                        NewOrdersContent.Dish = ShoppingCartList.SelectedItem.ToString();
+                        NewOrdersContent.DishStatus = NewStatus;
+                        Connection.OrderContent.Add(NewOrdersContent);
+                    }
+                    else { MessageBox.Show("Произошла ошибка!"); }
+                }
                 Connection.SaveChanges();
                 ShoppingCartList.Items.Clear();
                 MessageBox.Show("Благодарим вас за заказ!");

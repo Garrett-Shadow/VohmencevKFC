@@ -12,13 +12,17 @@ namespace Vohmencev_KFC_App.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Recipe
+    public partial class Positions
     {
-        public string Dish { get; set; }
-        public string Ingridient { get; set; }
-        public string Count { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Positions()
+        {
+            this.Staff = new HashSet<Staff>();
+        }
     
-        public virtual Dishes Dishes { get; set; }
-        public virtual Ingridients Ingridients { get; set; }
+        public string PositionName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Staff> Staff { get; set; }
     }
 }

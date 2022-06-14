@@ -23,28 +23,20 @@ namespace Vohmencev_KFC_App
         public MainWindow()
         {
             InitializeComponent();
+            CheckSuperUser();
         }
 
-        private void StaffButton_Click(object sender, RoutedEventArgs e)
+        private void CheckSuperUser()
         {
-            AppLabel.Visibility = Visibility.Collapsed;
-            AppLogo.Visibility = Visibility.Collapsed;
-            ClientButton.Visibility = Visibility.Collapsed;
-            StaffButton.Visibility = Visibility.Collapsed;
-            //ClientButton_Copy.Visibility = Visibility.Visible;
-            //StaffButton_Copy.Visibility = Visibility.Visible;
-            MainFrame.NavigationService.Navigate(Pages.PageClass.staff);
-        }
-
-        private void ClientButton_Click(object sender, RoutedEventArgs e)
-        {
-            AppLabel.Visibility = Visibility.Collapsed;
-            AppLogo.Visibility = Visibility.Collapsed;
-            ClientButton.Visibility = Visibility.Collapsed;
-            StaffButton.Visibility = Visibility.Collapsed;
-            //ClientButton_Copy.Visibility = Visibility.Visible;
-            //StaffButton_Copy.Visibility = Visibility.Visible;
-            MainFrame.NavigationService.Navigate(Pages.PageClass.client);
+            int count = Pages.Connector.GetModel().Staff.Count();
+            if (count == 0)
+            {
+                MainFrame.Navigate(Pages.PageClass.GetSuperUserRegistration());
+            }
+            else
+            {
+                MainFrame.Navigate(Pages.PageClass.GetAuthorization());
+            }
         }
     }
 }

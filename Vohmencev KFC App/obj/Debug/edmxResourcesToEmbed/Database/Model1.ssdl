@@ -37,6 +37,12 @@
     <Property Name="OrderDate" Type="date" />
     <Property Name="OrderStatus" Type="varchar" MaxLength="255" />
   </EntityType>
+  <EntityType Name="Positions">
+    <Key>
+      <PropertyRef Name="PositionName" />
+    </Key>
+    <Property Name="PositionName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Recipe">
     <Key>
       <PropertyRef Name="Dish" />
@@ -44,7 +50,16 @@
     </Key>
     <Property Name="Dish" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="Ingridient" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="IngridientCount" Type="varchar" MaxLength="255" />
+    <Property Name="Count" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="StaffLogin" />
+    </Key>
+    <Property Name="StaffLogin" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="StaffPassword" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="255" />
+    <Property Name="Position" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -146,13 +161,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Staff__Position__5EBF139D">
+    <End Role="Positions" Type="Self.Positions" Multiplicity="0..1" />
+    <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="PositionName" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="Position" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище Vohmencev_KFCModelContainer">
     <EntitySet Name="Dishes" EntityType="Self.Dishes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DishType" EntityType="Self.DishType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ingridients" EntityType="Self.Ingridients" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OrderContent" EntityType="Self.OrderContent" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Recipe" EntityType="Self.Recipe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Dishes__DishType__3D5E1FD2" Association="Self.FK__Dishes__DishType__3D5E1FD2">
@@ -182,6 +211,10 @@
     <AssociationSet Name="FK__Recipe__Ingridie__440B1D61" Association="Self.FK__Recipe__Ingridie__440B1D61">
       <End Role="Ingridients" EntitySet="Ingridients" />
       <End Role="Recipe" EntitySet="Recipe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Staff__Position__5EBF139D" Association="Self.FK__Staff__Position__5EBF139D">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Staff" EntitySet="Staff" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -47,6 +47,13 @@
     <NavigationProperty Name="OrderContent" Relationship="Self.FK__OrderCont__Paych__47DBAE45" FromRole="Orders" ToRole="OrderContent" />
     <NavigationProperty Name="Status" Relationship="Self.FK__Orders__OrderSta__403A8C7D" FromRole="Orders" ToRole="Status" />
   </EntityType>
+  <EntityType Name="Positions">
+    <Key>
+      <PropertyRef Name="PositionName" />
+    </Key>
+    <Property Name="PositionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK__Staff__Position__5EBF139D" FromRole="Positions" ToRole="Staff" />
+  </EntityType>
   <EntityType Name="Recipe">
     <Key>
       <PropertyRef Name="Dish" />
@@ -54,9 +61,19 @@
     </Key>
     <Property Name="Dish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Ingridient" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="IngridientCount" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Count" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Dishes" Relationship="Self.FK__Recipe__Dish__4316F928" FromRole="Recipe" ToRole="Dishes" />
     <NavigationProperty Name="Ingridients" Relationship="Self.FK__Recipe__Ingridie__440B1D61" FromRole="Recipe" ToRole="Ingridients" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="StaffLogin" />
+    </Key>
+    <Property Name="StaffLogin" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StaffPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Positions" Relationship="Self.FK__Staff__Position__5EBF139D" FromRole="Staff" ToRole="Positions" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -160,13 +177,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Staff__Position__5EBF139D">
+    <End Role="Positions" Type="Self.Positions" Multiplicity="0..1" />
+    <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="PositionName" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="Position" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Vohmencev_KFCEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Dishes" EntityType="Self.Dishes" />
     <EntitySet Name="DishType" EntityType="Self.DishType" />
     <EntitySet Name="Ingridients" EntityType="Self.Ingridients" />
     <EntitySet Name="OrderContent" EntityType="Self.OrderContent" />
     <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="Positions" EntityType="Self.Positions" />
     <EntitySet Name="Recipe" EntityType="Self.Recipe" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" />
     <EntitySet Name="Status" EntityType="Self.Status" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <AssociationSet Name="FK__Dishes__DishType__3D5E1FD2" Association="Self.FK__Dishes__DishType__3D5E1FD2">
@@ -196,6 +227,10 @@
     <AssociationSet Name="FK__Orders__OrderSta__403A8C7D" Association="Self.FK__Orders__OrderSta__403A8C7D">
       <End Role="Status" EntitySet="Status" />
       <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Staff__Position__5EBF139D" Association="Self.FK__Staff__Position__5EBF139D">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Staff" EntitySet="Staff" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

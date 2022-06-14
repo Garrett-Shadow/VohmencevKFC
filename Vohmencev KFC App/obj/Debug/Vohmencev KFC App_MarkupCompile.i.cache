@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\App.xaml
-3-1575981215
+7-1791004093
 2-1531416940
-20-718202911
+27-1318696210
 182110762784
-MainWindow.xaml;Pages\Client.xaml;Pages\KitchenStaff.xaml;
+MainWindow.xaml;Pages\Administrator.xaml;Pages\Authorization.xaml;Pages\Client.xaml;Pages\KitchenStaff.xaml;Pages\MainPage.xaml;Pages\SuperUserRegistration.xaml;
 
 True
 

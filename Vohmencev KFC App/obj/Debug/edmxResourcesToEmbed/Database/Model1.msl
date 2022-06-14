@@ -42,12 +42,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="Vohmencev_KFCModel.Positions">
+        <MappingFragment StoreEntitySet="Positions">
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Recipe">
       <EntityTypeMapping TypeName="Vohmencev_KFCModel.Recipe">
         <MappingFragment StoreEntitySet="Recipe">
           <ScalarProperty Name="Dish" ColumnName="Dish" />
           <ScalarProperty Name="Ingridient" ColumnName="Ingridient" />
-          <ScalarProperty Name="IngridientCount" ColumnName="IngridientCount" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staff">
+      <EntityTypeMapping TypeName="Vohmencev_KFCModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="StaffLogin" ColumnName="StaffLogin" />
+          <ScalarProperty Name="StaffPassword" ColumnName="StaffPassword" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -24,3 +24,11 @@ C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmenc
 C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.csproj.CopyComplete
 C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.exe
 C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Vohmencev KFC App.pdb
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\Authorization.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\SuperUserRegistration.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\Administrator.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\MainPage.g.cs
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\Administrator.baml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\Authorization.baml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\MainPage.baml
+C:\Users\User\source\repos\Vohmencev KFC App\Vohmencev KFC App\obj\Debug\Pages\SuperUserRegistration.baml

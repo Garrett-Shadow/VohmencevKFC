@@ -30,7 +30,9 @@ namespace Vohmencev_KFC_App.Database
         public virtual DbSet<Ingridients> Ingridients { get; set; }
         public virtual DbSet<OrderContent> OrderContent { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
+        public virtual DbSet<Positions> Positions { get; set; }
         public virtual DbSet<Recipe> Recipe { get; set; }
+        public virtual DbSet<Staff> Staff { get; set; }
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }

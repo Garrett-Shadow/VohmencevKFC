@@ -12,13 +12,13 @@ namespace Vohmencev_KFC_App.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Recipe
+    public partial class Staff
     {
-        public string Dish { get; set; }
-        public string Ingridient { get; set; }
-        public string Count { get; set; }
+        public string StaffLogin { get; set; }
+        public string StaffPassword { get; set; }
+        public string FullName { get; set; }
+        public string Position { get; set; }
     
-        public virtual Dishes Dishes { get; set; }
-        public virtual Ingridients Ingridients { get; set; }
+        public virtual Positions Positions { get; set; }
     }
 }
