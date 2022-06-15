@@ -177,7 +177,7 @@ namespace Vohmencev_KFC_App.Pages
             DishPriceText.Text = "";
             DishTypeCombo.SelectedIndex = -1;
             DishRecipe = new List<Database.Ingridients>();
-            RecipeHashSet = null;
+            DishRecipeList.GetBindingExpression(ListBox.ItemsSourceProperty)?.UpdateTarget();
             MessageBox.Show("Новое блюдо и его рецепт успешно добавлены!");
         }
 
@@ -186,6 +186,9 @@ namespace Vohmencev_KFC_App.Pages
             DishNameText.Text = "";
             DishPriceText.Text = "";
             DishTypeCombo.SelectedIndex = -1;
+            DishRecipe = new List<Database.Ingridients>();
+            DishRecipeList.GetBindingExpression(ListBox.ItemsSourceProperty)?.UpdateTarget();
+
         }
 
         private void IngridientListUpdate()
