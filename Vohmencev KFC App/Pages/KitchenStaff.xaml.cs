@@ -105,5 +105,10 @@ namespace Vohmencev_KFC_App.Pages
                 MessageBox.Show("Блюдо отменено!");
             }
         }
+
+        private void StaffBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(Pages.PageClass.GetMainPage());
+        }
     }
 }

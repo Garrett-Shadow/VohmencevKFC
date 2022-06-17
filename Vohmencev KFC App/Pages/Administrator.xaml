@@ -98,9 +98,8 @@
                     </ListBox>
                     <Label x:Name="IngridientNameLabel" Content="Название ингридиента" FontFamily="Segoe UI Black" FontSize="15" HorizontalAlignment="Right" Margin="0,25,25,0" VerticalAlignment="Top" Width="345"/>
                     <TextBox x:Name="IngridientNameText" Text="{Binding SelectedIngridient.IngridientName}" FontSize="15" HorizontalAlignment="Right" Margin="0,60,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" FontFamily="Segoe UI"/>
-                    <Button x:Name="IngridientAddButton" Content="Добавить" Background="White" HorizontalAlignment="Left" Margin="25,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientAddButton_Click"/>
-                    <Button x:Name="IngridientRefreshButton" Content="Обновить" Background="White" HorizontalAlignment="Left" Margin="224,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientRefreshButton_Click"/>
-                    <Button x:Name="IngridientDropButton" Content="Сбросить" Background="White" HorizontalAlignment="Left" Margin="424,371,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientDropButton_Click"/>
+                    <Button x:Name="IngridientAddButton" Content="Добавить" Background="White" HorizontalAlignment="Left" Margin="25,375,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientAddButton_Click"/>
+                    <Button x:Name="IngridientDropButton" Content="Сбросить" Background="White" HorizontalAlignment="Left" Margin="224,375,0,0" VerticalAlignment="Top" Width="151" Height="50" FontSize="20" Click="IngridientDropButton_Click"/>
 
                 </Grid>
             </TabItem>

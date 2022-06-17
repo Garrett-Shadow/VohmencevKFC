@@ -104,6 +104,14 @@ namespace Vohmencev_KFC_App.Pages {
         #line default
         #line hidden
         
+        
+        #line 21 "..\..\..\Pages\Client.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button ClientBackButton;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -175,6 +183,9 @@ namespace Vohmencev_KFC_App.Pages {
             
             #line default
             #line hidden
+            return;
+            case 9:
+            this.ClientBackButton = ((System.Windows.Controls.Button)(target));
             return;
             }
             this._contentLoaded = true;

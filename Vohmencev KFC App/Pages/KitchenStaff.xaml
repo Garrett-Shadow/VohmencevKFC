@@ -18,6 +18,7 @@
         <ListBox x:Name="RecipeList" Grid.Row="1" Grid.Column="1" FontFamily="Segoe UI Black" FontSize="20" HorizontalAlignment="Left" Height="253" Margin="25,60,0,0" VerticalAlignment="Top" Width="345"/>
         <Button x:Name="RemoveButton" Grid.Row="1" Grid.Column="1" Content="Отмена" Background="Red"  HorizontalAlignment="Left" Margin="25,335,0,0" VerticalAlignment="Top" Width="159" Height="50" FontSize="20" Click="RemoveButton_Click"/>
         <Button x:Name="ReadyButton" Grid.Row="1" Grid.Column="1" Content="Готово" Background="GreenYellow" HorizontalAlignment="Left" Margin="222,335,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="20" Click="ReadyButton_Click"/>
+        <Button x:Name="StaffBackButton" Background="White" Content="Назад" HorizontalAlignment="Left" Height="25" Margin="10,0,0,10" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Click="StaffBackButton_Click"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>

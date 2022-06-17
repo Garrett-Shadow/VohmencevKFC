@@ -18,6 +18,7 @@
         <Label x:Name="CartSumLabel" Grid.Row="1" Grid.Column="1" Content="Сумма: " FontFamily="Segoe UI Black" FontSize="20" HorizontalAlignment="Left" Margin="25,276,0,0" VerticalAlignment="Top" Width="345"/>
         <Button x:Name="CartRemoveButton" Grid.Row="1" Grid.Column="1" Content="Отмена" Background="Red"  HorizontalAlignment="Left" Margin="25,335,0,0" VerticalAlignment="Top" Width="159" Height="50" FontSize="20" Click="CartRemoveButton_Click"/>
         <Button x:Name="CartReadyButton" Grid.Row="1" Grid.Column="1" Content="Готово" Background="GreenYellow" HorizontalAlignment="Left" Margin="222,335,0,0" VerticalAlignment="Top" Width="148" Height="50" FontSize="20" Click="CartReadyButton_Click"/>
+        <Button x:Name="ClientBackButton" Background="White" Content="Назад" HorizontalAlignment="Left" Height="25" Margin="10,0,0,10" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Click="ClientBackButton_Click"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>

@@ -130,5 +130,10 @@ namespace Vohmencev_KFC_App.Pages
                 MessageBox.Show("Выберите блюдо, которое хотите убрать!");
             }
         }
+
+        private void ClientBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(Pages.PageClass.GetMainPage());
+        }
     }
 }
