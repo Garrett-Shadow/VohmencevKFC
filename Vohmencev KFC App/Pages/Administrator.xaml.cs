@@ -56,7 +56,18 @@ namespace Vohmencev_KFC_App.Pages
                 MessageBox.Show("Не все поля заполнены!");
                 return;
             }
+            int NewEmployeeNumber;
+            var LastEmployee = Connection.Staff.OrderBy(ord => ord.StaffCode).ToList().LastOrDefault();
+            if (LastEmployee == null)
+            {
+                NewEmployeeNumber = 1;
+            }
+            else
+            {
+                NewEmployeeNumber = LastEmployee.StaffCode + 1;
+            }
             var NewEmployee = new Database.Staff();
+            NewEmployee.StaffCode = NewEmployeeNumber;
             NewEmployee.StaffLogin = StaffLogin.Text.Trim();
             NewEmployee.StaffPassword = StaffPassword.Text.Trim();
             NewEmployee.FullName = StaffNameText.Text.ToString();

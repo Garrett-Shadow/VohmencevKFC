@@ -59,9 +59,10 @@
         </EntityType>
         <EntityType Name="Staff">
           <Key>
-            <PropertyRef Name="StaffLogin" />
+            <PropertyRef Name="StaffCode" />
           </Key>
-          <Property Name="StaffLogin" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="StaffCode" Type="int" Nullable="false" />
+          <Property Name="StaffLogin" Type="varchar" MaxLength="15" />
           <Property Name="StaffPassword" Type="varchar" MaxLength="50" />
           <Property Name="FullName" Type="varchar" MaxLength="255" />
           <Property Name="Position" Type="varchar" MaxLength="50" />
@@ -294,9 +295,10 @@
         </EntityType>
         <EntityType Name="Staff">
           <Key>
-            <PropertyRef Name="StaffLogin" />
+            <PropertyRef Name="StaffCode" />
           </Key>
-          <Property Name="StaffLogin" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StaffCode" Type="Int32" Nullable="false" />
+          <Property Name="StaffLogin" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="StaffPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -526,6 +528,7 @@
           <EntitySetMapping Name="Staff">
             <EntityTypeMapping TypeName="Vohmencev_KFCModel.Staff">
               <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="StaffCode" ColumnName="StaffCode" />
                 <ScalarProperty Name="StaffLogin" ColumnName="StaffLogin" />
                 <ScalarProperty Name="StaffPassword" ColumnName="StaffPassword" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
